@@ -1,0 +1,14 @@
+AmntOfWorkers = int(input("How many employees were working: "))
+i=0
+
+while (i<AmntOfWorkers):
+    print("How many hours did employee",i+1,"work: ")
+    WrkHrs = int(input())
+
+    if WrkHrs<40:
+        wage = WrkHrs*3.078 # 3.078 is the hour rate by default.
+    elif WrkHrs>40:
+        wage = (40*3.078) + ((WrkHrs-40)*(2*3.078))
+
+    i+=1
+    print("The wage of employee",i,"is","{:.2f}".format(wage),"bucks. ")
