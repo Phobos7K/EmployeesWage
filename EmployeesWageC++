@@ -1,0 +1,31 @@
+#include<iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	
+	const float Hour_rate = 3.078;
+	int AmntOfWorkers,i=0;
+	float wage, WrkHrs;
+	
+	cout<<"How many emplyees were working: ";
+	cin>>AmntOfWorkers;
+	
+	while(i<AmntOfWorkers) {
+		
+		cout<<"How many hours did employee "<<i+1<<" work: "<<endl;
+		cin>>WrkHrs;
+		
+		if (WrkHrs < 40) {
+			wage = WrkHrs * Hour_rate;
+		}else if (WrkHrs > 40)
+			wage = (40*Hour_rate) + ((WrkHrs-40)*(2*Hour_rate));
+			
+		i++;
+		cout<<"The wage of emploee "<<i<<" is "<<wage<<" bucks."<<endl;
+		
+	}
+	
+	return 0;
+}
